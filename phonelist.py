@@ -14,7 +14,8 @@ def print_welcome_message():
       add    - add a phone number
       delete - delete a contact
       list   - list all phone numbers
-      quit   - quit the program""")
+      quit   - quit the program
+      help   - display a help message""")
 
 
 def read_phonelist(C):
@@ -54,5 +55,7 @@ while True: ## REPL - Read Execute Program Loop
     elif cmd == "QUIT":
         save_phonelist(conn)
         exit()
+    elif cmd == "HELP":
+        print_welcome_message()
     else:
         print(f"Unknown command: {cmd}")
